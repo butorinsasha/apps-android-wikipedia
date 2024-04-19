@@ -5,15 +5,15 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.Until
 
-class OnboardingPage : BasePage() {
-
+class SettingsPage : BasePage() {
     private val targetPackage = ApplicationProvider.getApplicationContext<Context>().packageName
 
-    private val skipButton = By.res(targetPackage, "fragment_onboarding_skip_button")
-
-    fun clickSkipButton() {
+    private val exploreFeedButton =
+        By.clazz("android.widget.RelativeLayout")
+            .hasChild(By.text("Explore Feed"))
+    fun clickExploreFeedButton() {
         device
-            .wait(Until.findObject(skipButton), WAITING_TIMEOUT)
+            .wait(Until.findObject(exploreFeedButton), WAITING_TIMEOUT)
             .click()
     }
 }

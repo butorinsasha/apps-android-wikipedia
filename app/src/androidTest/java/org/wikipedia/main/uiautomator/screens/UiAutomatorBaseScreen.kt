@@ -7,7 +7,7 @@ import androidx.test.uiautomator.UiDevice
 
 const val WAITING_TIMEOUT = 2000L
 
-open class BaseScreen {
+open class UiAutomatorBaseScreen {
     val targetPackage = ApplicationProvider.getApplicationContext<Context>().packageName!!
     val device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
 }

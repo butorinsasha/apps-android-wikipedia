@@ -3,7 +3,7 @@ package org.wikipedia.main.uiautomator.screens
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.Until
 
-class MainScreen : BaseScreen() {
+class UiAutomatorMainScreen : UiAutomatorBaseScreen() {
 
     private val moreButton = By.res(targetPackage, "nav_more_container")
     private val drawerSettingsButton = By.res(targetPackage, "main_drawer_settings_container")

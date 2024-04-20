@@ -1,4 +1,4 @@
-package org.wikipedia.main.screens
+package org.wikipedia.main.uiautomator.screens
 
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.Until

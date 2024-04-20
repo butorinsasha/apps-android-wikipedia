@@ -1,4 +1,4 @@
-package org.wikipedia.main.screens
+package org.wikipedia.main.uiautomator.screens
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider

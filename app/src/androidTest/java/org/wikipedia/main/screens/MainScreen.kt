@@ -1,12 +1,9 @@
-package org.wikipedia.main.pages
+package org.wikipedia.main.screens
 
-import android.content.Context
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.Until
 
-class MainPage : BasePage() {
-    private val targetPackage = ApplicationProvider.getApplicationContext<Context>().packageName
+class MainScreen : BaseScreen() {
 
     private val moreButton = By.res(targetPackage, "nav_more_container")
     private val drawerSettingsButton = By.res(targetPackage, "main_drawer_settings_container")
@@ -18,7 +15,8 @@ class MainPage : BasePage() {
     }
 
     fun clickDrawerSettingButton() {
-        device.wait(Until.findObject(drawerSettingsButton), WAITING_TIMEOUT)
+        device
+            .wait(Until.findObject(drawerSettingsButton), WAITING_TIMEOUT)
             .click()
     }
 
